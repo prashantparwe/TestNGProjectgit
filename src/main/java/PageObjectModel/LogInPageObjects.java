@@ -13,7 +13,7 @@ public class LogInPageObjects {
 	private By TryForFree=By.xpath("//a[@id='signup_link']");
 	
 	
-	// This is demo line added for git demo purpose 
+	// This line is added for git demo purpose
 	public LogInPageObjects(WebDriver driver2) {
 		// Created above constructor 
 		this.driver=driver2;
