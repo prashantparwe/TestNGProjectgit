@@ -36,7 +36,7 @@
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.6.1</version>
-    <scope>test</scope>
+     <scope>compile</scope>
 </dependency>
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
@@ -44,9 +44,7 @@
     <artifactId>webdrivermanager</artifactId>
     <version>5.3.0</version>
 </dependency>
-
   </dependencies>
-
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -89,6 +87,16 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <plugin> 
+        <groupId>org.apache.maven.plugins</groupId> 
+        <artifactId>maven-surefire-plugin</artifactId> 
+        <version>3.0.0-M5</version> 
+        <configuration> 
+          <suiteXmlFiles> 
+            <suiteXmlFile>testng.xml</suiteXmlFile> 
+          </suiteXmlFiles> 
+        </configuration> 
+      </plugin>
       </plugins>
     </pluginManagement>
   </build>
